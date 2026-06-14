@@ -53,6 +53,15 @@ MpvController::MpvController(const QString &appRoot, QObject *parent)
         f.write("ESC quit\n");
         f.write("BS quit\n");
         f.write("ENTER cycle pause\n");
+        f.write("XF86AudioPlay cycle pause\n");
+        f.write("XF86AudioPause cycle pause\n");
+        f.write("KEY_PLAYPAUSE cycle pause\n");
+        f.write("XF86AudioStop stop\n");
+        f.write("XF86AudioNext playlist-next\n");
+        f.write("XF86AudioPrev playlist-prev\n");
+        f.write("XF86AudioRaiseVolume add volume 5\n");
+        f.write("XF86AudioLowerVolume add volume -5\n");
+        f.write("XF86AudioMute cycle mute\n");
         f.close();
     }
 
